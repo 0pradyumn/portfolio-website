@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pradyumn Singh — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Pradyumn Singh, full-stack developer and founder of ArenaZ4." />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <span class="logo">PS<span class="accent">.</span></span>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / About (rendered from GET /api/portfolio) -->
+    <section id="about" class="hero container">
+      <p class="kicker">Hello, I'm</p>
+      <h1 id="heroName">Loading…</h1>
+      <h2 class="accent" id="heroTitle"></h2>
+      <p class="bio" id="heroBio"></p>
+      <div class="socials" id="heroSocials"></div>
+      <a href="#contact" class="btn">Get in touch</a>
+    </section>
+
+    <section id="skills" class="container section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <section id="education" class="container section">
+      <h2 class="section-title">Education</h2>
+      <div id="educationList"></div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2 class="section-title">Contact</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <label>Name
+            <input type="text" name="name" required maxlength="100" />
+          </label>
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+        </div>
+        <label>Subject
+          <input type="text" name="subject" maxlength="200" />
+        </label>
+        <label>Message
+          <textarea name="message" rows="5" required minlength="5" maxlength="2000"></textarea>
+        </label>
+        <button type="submit" class="btn" id="submitBtn">Send message</button>
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="footerText"></p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
